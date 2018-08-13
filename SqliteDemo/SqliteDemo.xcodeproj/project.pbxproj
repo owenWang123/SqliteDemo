@@ -10,13 +10,22 @@
 		2DB6110CA59AD0757721CBFC /* libPods-SqliteDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C70D08D0471F072B99127791 /* libPods-SqliteDemo.a */; };
 		2F27383905838109FE278CF7 /* libPods-SqliteDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 136C1A6F597B67AB89A4FBC8 /* libPods-SqliteDemoUITests.a */; };
 		845B22642121644F0005B605 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22632121644F0005B605 /* AppDelegate.m */; };
-		845B22672121644F0005B605 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22662121644F0005B605 /* ViewController.m */; };
 		845B226A2121644F0005B605 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845B22682121644F0005B605 /* Main.storyboard */; };
 		845B226C212164510005B605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845B226B212164510005B605 /* Assets.xcassets */; };
 		845B226F212164510005B605 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845B226D212164510005B605 /* LaunchScreen.storyboard */; };
 		845B2272212164510005B605 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B2271212164510005B605 /* main.m */; };
 		845B227C212164510005B605 /* SqliteDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B227B212164510005B605 /* SqliteDemoTests.m */; };
 		845B2287212164510005B605 /* SqliteDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B2286212164510005B605 /* SqliteDemoUITests.m */; };
+		845B229721216DAB0005B605 /* HTInsertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B229621216DAB0005B605 /* HTInsertViewController.m */; };
+		845B229A21216DBB0005B605 /* HTDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B229921216DBB0005B605 /* HTDeleteViewController.m */; };
+		845B229D21216DC90005B605 /* HTUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B229C21216DC90005B605 /* HTUpdateViewController.m */; };
+		845B22A021216DE00005B605 /* HTQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B229F21216DE00005B605 /* HTQueryViewController.m */; };
+		845B22A5212171EE0005B605 /* HTInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22A4212171EE0005B605 /* HTInputView.m */; };
+		845B22AC2121ABC90005B605 /* HTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22AB2121ABC90005B605 /* HTListViewController.m */; };
+		845B22AF2121ABDE0005B605 /* HTMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22AE2121ABDE0005B605 /* HTMenuViewController.m */; };
+		845B22B62121AE370005B605 /* HTBaseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22B32121AE370005B605 /* HTBaseListModel.m */; };
+		845B22B72121AE370005B605 /* HTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22B52121AE370005B605 /* HTBaseModel.m */; };
+		845B22BA2121B48F0005B605 /* HTScoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22B92121B48F0005B605 /* HTScoreManager.m */; };
 		BAAF739E27C793F107882D3D /* libPods-SqliteDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAAD28D99D3D060F0FAC2FF /* libPods-SqliteDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +54,6 @@
 		845B225F2121644F0005B605 /* SqliteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SqliteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845B22622121644F0005B605 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		845B22632121644F0005B605 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		845B22652121644F0005B605 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		845B22662121644F0005B605 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		845B22692121644F0005B605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		845B226B212164510005B605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		845B226E212164510005B605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +65,27 @@
 		845B2282212164510005B605 /* SqliteDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SqliteDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		845B2286212164510005B605 /* SqliteDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqliteDemoUITests.m; sourceTree = "<group>"; };
 		845B2288212164510005B605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		845B229521216DAB0005B605 /* HTInsertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTInsertViewController.h; sourceTree = "<group>"; };
+		845B229621216DAB0005B605 /* HTInsertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTInsertViewController.m; sourceTree = "<group>"; };
+		845B229821216DBB0005B605 /* HTDeleteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTDeleteViewController.h; sourceTree = "<group>"; };
+		845B229921216DBB0005B605 /* HTDeleteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTDeleteViewController.m; sourceTree = "<group>"; };
+		845B229B21216DC90005B605 /* HTUpdateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTUpdateViewController.h; sourceTree = "<group>"; };
+		845B229C21216DC90005B605 /* HTUpdateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTUpdateViewController.m; sourceTree = "<group>"; };
+		845B229E21216DE00005B605 /* HTQueryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTQueryViewController.h; sourceTree = "<group>"; };
+		845B229F21216DE00005B605 /* HTQueryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTQueryViewController.m; sourceTree = "<group>"; };
+		845B22A3212171EE0005B605 /* HTInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTInputView.h; sourceTree = "<group>"; };
+		845B22A4212171EE0005B605 /* HTInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTInputView.m; sourceTree = "<group>"; };
+		845B22A62121793D0005B605 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		845B22AA2121ABC90005B605 /* HTListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTListViewController.h; sourceTree = "<group>"; };
+		845B22AB2121ABC90005B605 /* HTListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTListViewController.m; sourceTree = "<group>"; };
+		845B22AD2121ABDE0005B605 /* HTMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTMenuViewController.h; sourceTree = "<group>"; };
+		845B22AE2121ABDE0005B605 /* HTMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTMenuViewController.m; sourceTree = "<group>"; };
+		845B22B22121AE370005B605 /* HTBaseListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBaseListModel.h; sourceTree = "<group>"; };
+		845B22B32121AE370005B605 /* HTBaseListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBaseListModel.m; sourceTree = "<group>"; };
+		845B22B42121AE370005B605 /* HTBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBaseModel.h; sourceTree = "<group>"; };
+		845B22B52121AE370005B605 /* HTBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBaseModel.m; sourceTree = "<group>"; };
+		845B22B82121B48F0005B605 /* HTScoreManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTScoreManager.h; sourceTree = "<group>"; };
+		845B22B92121B48F0005B605 /* HTScoreManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTScoreManager.m; sourceTree = "<group>"; };
 		8EAAD28D99D3D060F0FAC2FF /* libPods-SqliteDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SqliteDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70D08D0471F072B99127791 /* libPods-SqliteDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SqliteDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9B87C9F888E5FEF8C5CF13 /* Pods-SqliteDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SqliteDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SqliteDemo/Pods-SqliteDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,15 +146,9 @@
 		845B22612121644F0005B605 /* SqliteDemo */ = {
 			isa = PBXGroup;
 			children = (
-				845B22622121644F0005B605 /* AppDelegate.h */,
-				845B22632121644F0005B605 /* AppDelegate.m */,
-				845B22652121644F0005B605 /* ViewController.h */,
-				845B22662121644F0005B605 /* ViewController.m */,
-				845B22682121644F0005B605 /* Main.storyboard */,
-				845B226B212164510005B605 /* Assets.xcassets */,
-				845B226D212164510005B605 /* LaunchScreen.storyboard */,
-				845B2270212164510005B605 /* Info.plist */,
-				845B2271212164510005B605 /* main.m */,
+				845B229421216D8A0005B605 /* Class */,
+				845B22A92121AAEB0005B605 /* FMDB */,
+				845B22A82121AA360005B605 /* Setting */,
 			);
 			path = SqliteDemo;
 			sourceTree = "<group>";
@@ -147,6 +169,95 @@
 				845B2288212164510005B605 /* Info.plist */,
 			);
 			path = SqliteDemoUITests;
+			sourceTree = "<group>";
+		};
+		845B229421216D8A0005B605 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				845B22A1212171530005B605 /* Controllers */,
+				845B22A2212171540005B605 /* Views */,
+				845B22A72121A8A60005B605 /* Models */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		845B22A1212171530005B605 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				845B22B02121AC220005B605 /* Features */,
+				845B22AD2121ABDE0005B605 /* HTMenuViewController.h */,
+				845B22AE2121ABDE0005B605 /* HTMenuViewController.m */,
+				845B22AA2121ABC90005B605 /* HTListViewController.h */,
+				845B22AB2121ABC90005B605 /* HTListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		845B22A2212171540005B605 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				845B22A3212171EE0005B605 /* HTInputView.h */,
+				845B22A4212171EE0005B605 /* HTInputView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		845B22A72121A8A60005B605 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				845B22B12121AE370005B605 /* BaseModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		845B22A82121AA360005B605 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				845B22622121644F0005B605 /* AppDelegate.h */,
+				845B22632121644F0005B605 /* AppDelegate.m */,
+				845B226B212164510005B605 /* Assets.xcassets */,
+				845B22682121644F0005B605 /* Main.storyboard */,
+				845B226D212164510005B605 /* LaunchScreen.storyboard */,
+				845B2270212164510005B605 /* Info.plist */,
+				845B2271212164510005B605 /* main.m */,
+				845B22A62121793D0005B605 /* PrefixHeader.pch */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		845B22A92121AAEB0005B605 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				845B22B82121B48F0005B605 /* HTScoreManager.h */,
+				845B22B92121B48F0005B605 /* HTScoreManager.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		845B22B02121AC220005B605 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				845B229521216DAB0005B605 /* HTInsertViewController.h */,
+				845B229621216DAB0005B605 /* HTInsertViewController.m */,
+				845B229821216DBB0005B605 /* HTDeleteViewController.h */,
+				845B229921216DBB0005B605 /* HTDeleteViewController.m */,
+				845B229B21216DC90005B605 /* HTUpdateViewController.h */,
+				845B229C21216DC90005B605 /* HTUpdateViewController.m */,
+				845B229E21216DE00005B605 /* HTQueryViewController.h */,
+				845B229F21216DE00005B605 /* HTQueryViewController.m */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		845B22B12121AE370005B605 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				845B22B22121AE370005B605 /* HTBaseListModel.h */,
+				845B22B32121AE370005B605 /* HTBaseListModel.m */,
+				845B22B42121AE370005B605 /* HTBaseModel.h */,
+				845B22B52121AE370005B605 /* HTBaseModel.m */,
+			);
+			path = BaseModel;
 			sourceTree = "<group>";
 		};
 		AC2AA09AA82979A8E132A704 /* Frameworks */ = {
@@ -362,9 +473,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845B22672121644F0005B605 /* ViewController.m in Sources */,
+				845B22AC2121ABC90005B605 /* HTListViewController.m in Sources */,
 				845B2272212164510005B605 /* main.m in Sources */,
+				845B22BA2121B48F0005B605 /* HTScoreManager.m in Sources */,
+				845B22B62121AE370005B605 /* HTBaseListModel.m in Sources */,
 				845B22642121644F0005B605 /* AppDelegate.m in Sources */,
+				845B229D21216DC90005B605 /* HTUpdateViewController.m in Sources */,
+				845B22AF2121ABDE0005B605 /* HTMenuViewController.m in Sources */,
+				845B22B72121AE370005B605 /* HTBaseModel.m in Sources */,
+				845B229A21216DBB0005B605 /* HTDeleteViewController.m in Sources */,
+				845B22A021216DE00005B605 /* HTQueryViewController.m in Sources */,
+				845B229721216DAB0005B605 /* HTInsertViewController.m in Sources */,
+				845B22A5212171EE0005B605 /* HTInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,13 +655,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SqliteDemo/Info.plist;
+				DEVELOPMENT_TEAM = 3J7B9KYE5F;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SqliteDemo/Setting/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SqliteDemo/Setting/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.owen.SqliteDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owen.MusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -553,13 +676,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SqliteDemo/Info.plist;
+				DEVELOPMENT_TEAM = 3J7B9KYE5F;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SqliteDemo/Setting/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SqliteDemo/Setting/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.owen.SqliteDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.owen.MusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
