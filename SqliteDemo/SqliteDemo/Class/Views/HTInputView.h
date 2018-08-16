@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HTInputView : UIView
+@interface HTInputView : UIView<UITextFieldDelegate>
 @property (nonatomic, strong) UILabel *titleLab;
 @property (nonatomic, strong) UITextField *inputFld;
 

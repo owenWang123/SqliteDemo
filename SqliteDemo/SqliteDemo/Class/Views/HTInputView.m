@@ -31,7 +31,7 @@
         make.left.mas_equalTo(self.mas_left).mas_offset(10);
         make.top.mas_equalTo(self.mas_top).mas_offset(5);
         make.bottom.mas_equalTo(self.mas_bottom).mas_offset(-5);
-        make.width.mas_equalTo(80);
+        make.width.mas_equalTo(60);
     }];
     self.titleLab.font = [UIFont systemFontOfSize:16];
     self.titleLab.textColor = [UIColor redColor];
@@ -41,9 +41,20 @@
     [self.inputFld mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.titleLab.mas_right).mas_offset(10);
         make.right.mas_equalTo(self.mas_right).mas_offset(-10);
-        make.top.bottom.mas_equalTo(self).mas_offset(0);
+        make.top.mas_equalTo(self).mas_offset(5);
+        make.bottom.mas_equalTo(self).mas_offset(-5);
     }];
+    self.inputFld.delegate = self;
+    self.inputFld.returnKeyType = UIReturnKeyDone;
     self.inputFld.font = [UIFont systemFontOfSize:14];
     self.inputFld.textColor = [UIColor blackColor];
+    self.inputFld.layer.masksToBounds = YES;
+    self.inputFld.layer.cornerRadius = 5;
+    self.inputFld.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.inputFld.layer.borderWidth = 0.5;
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 @end

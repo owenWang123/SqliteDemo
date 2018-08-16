@@ -26,6 +26,7 @@
 		845B22B62121AE370005B605 /* HTBaseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22B32121AE370005B605 /* HTBaseListModel.m */; };
 		845B22B72121AE370005B605 /* HTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22B52121AE370005B605 /* HTBaseModel.m */; };
 		845B22BA2121B48F0005B605 /* HTScoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22B92121B48F0005B605 /* HTScoreManager.m */; };
+		845B22BD212268F40005B605 /* HTStudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B22BC212268F40005B605 /* HTStudentModel.m */; };
 		BAAF739E27C793F107882D3D /* libPods-SqliteDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAAD28D99D3D060F0FAC2FF /* libPods-SqliteDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,8 @@
 		845B22B52121AE370005B605 /* HTBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBaseModel.m; sourceTree = "<group>"; };
 		845B22B82121B48F0005B605 /* HTScoreManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTScoreManager.h; sourceTree = "<group>"; };
 		845B22B92121B48F0005B605 /* HTScoreManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTScoreManager.m; sourceTree = "<group>"; };
+		845B22BB212268F40005B605 /* HTStudentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTStudentModel.h; sourceTree = "<group>"; };
+		845B22BC212268F40005B605 /* HTStudentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTStudentModel.m; sourceTree = "<group>"; };
 		8EAAD28D99D3D060F0FAC2FF /* libPods-SqliteDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SqliteDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70D08D0471F072B99127791 /* libPods-SqliteDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SqliteDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9B87C9F888E5FEF8C5CF13 /* Pods-SqliteDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SqliteDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SqliteDemo/Pods-SqliteDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				845B22B12121AE370005B605 /* BaseModel */,
+				845B22BB212268F40005B605 /* HTStudentModel.h */,
+				845B22BC212268F40005B605 /* HTStudentModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 			files = (
 				845B22AC2121ABC90005B605 /* HTListViewController.m in Sources */,
 				845B2272212164510005B605 /* main.m in Sources */,
+				845B22BD212268F40005B605 /* HTStudentModel.m in Sources */,
 				845B22BA2121B48F0005B605 /* HTScoreManager.m in Sources */,
 				845B22B62121AE370005B605 /* HTBaseListModel.m in Sources */,
 				845B22642121644F0005B605 /* AppDelegate.m in Sources */,
