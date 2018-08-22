@@ -52,19 +52,78 @@
         }
     }
 }
-- (void)insertDataToTable:(NSString *)table withModel:(HTStudentModel *)model{
+- (BOOL)insertDataToTable:(NSString *)table withModel:(HTStudentModel *)model{
+    NSString *sqlStr = [NSString stringWithFormat:@"INSERT INTO %@ (name, yuwen, math, english) VALUES (?, ?, ?, ?);",table];
     
+    BOOL success = [self.database executeUpdate:sqlStr, model.name, @(model.yuwen), @(model.math), @(model.english)];
+    
+    if (success) {
+        NSLog(@"插入成功");
+    } else {
+        NSLog(@"插入失败");
+    }
+    return success;
 }
-- (void)deleteDataFromTable:(NSString *)table withModel:(HTStudentModel *)model{
+- (BOOL)deleteDataFromTable:(NSString *)table withModel:(HTStudentModel *)model{
+    NSString *sqlStr = [NSString stringWithFormat:@"DELETE FROM %@ WHERE name = ?;",table];
     
+    BOOL success = [self.database executeUpdate:sqlStr, model.name];
+    
+    if (success) {
+        NSLog(@"删除成功");
+    } else {
+        NSLog(@"删除失败");
+    }
+    return success;
 }
-- (void)updateDataInTable:(NSString *)table withModel:(HTStudentModel *)model{
+- (BOOL)updateDataInTable:(NSString *)table withModel:(HTStudentModel *)model{
+    NSString *sqlStr = [NSString stringWithFormat:@"UPDATE %@ SET math = ? WHERE name = ?;",table];
     
+    BOOL success = [self.database executeUpdate:sqlStr, @(model.math), model.name];
+    
+    if (success) {
+        NSLog(@"更新成功");
+    } else {
+        NSLog(@"更新失败");
+    }
+    return success;
 }
-- (void)queryDataFromTable:(NSString *)table withKeyword:(NSString *)keyword{
+- (NSArray *)queryDataFromTable:(NSString *)table withKeyword:(NSString *)keyword{
+    NSString *sqlStr = [NSString stringWithFormat:@"SELECT name, yuwen, math, english FROM %@ WHERE name = ?",table];
     
+    FMResultSet *result = [self.database executeQuery:sqlStr, keyword];
+    
+    NSMutableArray *resultArr = [NSMutableArray arrayWithCapacity:10];
+    while ([result next]) {
+        HTStudentModel *studentModel = [[HTStudentModel alloc]init];
+        
+        studentModel.name = [result stringForColumn:@"name"];
+        studentModel.yuwen = [result intForColumn:@"yuwen"];
+        studentModel.math = [result intForColumn:@"math"];
+        studentModel.english = [result intForColumn:@"english"];
+        
+        [resultArr addObject:studentModel];
+    }
+    
+    return resultArr;
 }
-- (void)fetchAllDataInTable:(NSString *)table{
+- (NSArray *)fetchAllDataInTable:(NSString *)table{
+    NSString *sqlStr = [NSString stringWithFormat:@"SELECT * FROM %@",table];
     
+    FMResultSet *result = [self.database executeQuery:sqlStr];
+    
+    NSMutableArray *resultArr = [NSMutableArray arrayWithCapacity:10];
+    while ([result next]) {
+        HTStudentModel *studentModel = [[HTStudentModel alloc]init];
+        
+        studentModel.name = [result stringForColumn:@"name"];
+        studentModel.yuwen = [result intForColumn:@"yuwen"];
+        studentModel.math = [result intForColumn:@"math"];
+        studentModel.english = [result intForColumn:@"english"];
+        
+        [resultArr addObject:studentModel];
+    }
+    
+    return resultArr;
 }
 @end

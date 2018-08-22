@@ -10,7 +10,7 @@
 
 @interface HTListViewController : UIViewController
 /**
- *  1、Delete；2、Update；3、Query
+ *  1、Delete；2、Update；
  */
 @property (nonatomic, assign) NSInteger sourceType;
 

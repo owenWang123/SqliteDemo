@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HTUpdateViewController : UIViewController
-@property (nonatomic, assign) NSInteger selectedIndex;
+@property (nonatomic, strong) HTStudentModel *studentModel;
 
 @end

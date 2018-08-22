@@ -86,9 +86,21 @@
     [self.insertBtn setTitle:@"Insert" forState:UIControlStateNormal];
     [self.insertBtn addTarget:self action:@selector(insertAction) forControlEvents:UIControlEventTouchUpInside];
 }
+#pragma mark- Action
 - (void)insertAction{
     [[UIApplication sharedApplication].keyWindow endEditing:YES];
     
+    NSDictionary *dataDict = @{@"name":self.nameView.inputFld.text,
+                               @"yuwen":[NSNumber numberWithInteger:self.yuwenView.inputFld.text.integerValue],
+                               @"math":[NSNumber numberWithInteger:self.mathView.inputFld.text.integerValue],
+                               @"english":[NSNumber numberWithInteger:self.englishView.inputFld.text.integerValue],
+                               };
+    HTStudentModel *model = [MTLJSONAdapter modelOfClass:[HTStudentModel class] fromJSONDictionary:dataDict error:nil];
+    
+    BOOL result = [[HTScoreManager sharedManager] insertDataToTable:@"t_class1" withModel:model];
+    if (result) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 #pragma mark-
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

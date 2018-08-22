@@ -7,9 +7,15 @@
 //
 
 #import "HTUpdateViewController.h"
+#import "HTInputView.h"
 
 @interface HTUpdateViewController ()
+@property (nonatomic, strong) HTInputView *nameView;
+@property (nonatomic, strong) HTInputView *yuwenView;
+@property (nonatomic, strong) HTInputView *mathView;
+@property (nonatomic, strong) HTInputView *englishView;
 
+@property (nonatomic, strong) UIButton *insertBtn;
 @end
 
 @implementation HTUpdateViewController
@@ -19,10 +25,96 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self configUI];
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self updateUI];
+}
 - (void)configUI{
     self.title = @"Update";
+    
+    self.nameView = [[HTInputView alloc]init];
+    [self.view addSubview:self.nameView];
+    [self.nameView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view.mas_top).mas_offset(64);
+        make.left.right.mas_equalTo(self.view).mas_offset(0);
+        make.height.mas_equalTo(50);
+    }];
+    self.nameView.titleLab.text = @"姓名";
+    self.nameView.inputFld.placeholder = @"name";
+    self.nameView.inputFld.keyboardType = UIKeyboardTypeDefault;
+    
+    self.yuwenView = [[HTInputView alloc]init];
+    [self.view addSubview:self.yuwenView];
+    [self.yuwenView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.nameView.mas_bottom).mas_offset(0);
+        make.left.right.mas_equalTo(self.view).mas_offset(0);
+        make.height.mas_equalTo(50);
+    }];
+    self.yuwenView.titleLab.text = @"语文";
+    self.yuwenView.inputFld.placeholder = @"yuwen score";
+    self.yuwenView.inputFld.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    
+    self.mathView = [[HTInputView alloc]init];
+    [self.view addSubview:self.mathView];
+    [self.mathView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.yuwenView.mas_bottom).mas_offset(0);
+        make.left.right.mas_equalTo(self.view).mas_offset(0);
+        make.height.mas_equalTo(50);
+    }];
+    self.mathView.titleLab.text = @"数学";
+    self.mathView.inputFld.placeholder = @"math score";
+    self.mathView.inputFld.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    
+    self.englishView = [[HTInputView alloc]init];
+    [self.view addSubview:self.englishView];
+    [self.englishView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.mathView.mas_bottom).mas_offset(0);
+        make.left.right.mas_equalTo(self.view).mas_offset(0);
+        make.height.mas_equalTo(50);
+    }];
+    self.englishView.titleLab.text = @"英语";
+    self.englishView.inputFld.placeholder = @"english score";
+    self.englishView.inputFld.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    
+    self.insertBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:self.insertBtn];
+    [self.insertBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.englishView.mas_bottom).mas_offset(40);
+        make.centerX.mas_equalTo(self.view.mas_centerX).mas_offset(0);
+        make.height.mas_equalTo(40);
+        make.width.mas_equalTo(100);
+    }];
+    self.insertBtn.backgroundColor = [UIColor redColor];
+    [self.insertBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.insertBtn setTitle:@"Update" forState:UIControlStateNormal];
+    [self.insertBtn addTarget:self action:@selector(updateAction) forControlEvents:UIControlEventTouchUpInside];
 }
-
+#pragma mark- Action
+- (void)updateUI{
+    self.nameView.inputFld.text = self.studentModel.name;
+    
+    self.yuwenView.inputFld.text = [NSString stringWithFormat:@"%ld",(long)self.studentModel.yuwen];
+    
+    self.mathView.inputFld.text = [NSString stringWithFormat:@"%ld",(long)self.studentModel.math];
+    
+    self.englishView.inputFld.text = [NSString stringWithFormat:@"%ld",(long)self.studentModel.english];
+}
+- (void)updateAction{
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+    
+    self.studentModel.yuwen = self.yuwenView.inputFld.text.integerValue;
+    self.studentModel.math = self.mathView.inputFld.text.integerValue;
+    self.studentModel.english = self.englishView.inputFld.text.integerValue;
+    
+    BOOL result = [[HTScoreManager sharedManager] updateDataInTable:@"t_class1" withModel:self.studentModel];
+    if (result) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+#pragma mark-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
